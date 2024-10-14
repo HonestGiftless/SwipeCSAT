@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    background-color: rgb(246, 246, 246);
+    border-bottom: 1px solid black;
+}
+
+a.header_container {
+    font-family: "Montserrat Alternates", sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: black;
+}
+
+a.header_container:hover {
+    color: rgba(0, 0, 0, 0.471);
+}
+
+.logo {
+    position: absolute;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "a b" "c c";
+}
+
+.description_container {
+    grid-area: a;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nested_description_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: b;
+}
+
+.about_container {
+    grid-area: c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    font-family: "Palanquin Dark", sans-serif;
+}
+
+.describe_p {
+    font-family: "Nanum Gothic Coding", monospace;
+}
+
+.start_btn {
+    background-color: black;
+    color: white;
+    font-family: "Montserrat Alternates", sans-serif;
+    border: none;
+}
+
+.about_btn {
+    background-color: rgb(0, 0, 0);
+    color:white;
+    font-family: "Montserrat Alternates", sans-serif;
+    border: 1px solid black;
+}
+
+.start_btn:hover,
+.about_btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.666);
+}
+
+/* Широкоформатные */
+@media only screen and (min-width: 1441px) {
+    header {
+        padding: 0 2%;
+    }
+
+    a.header_container {
+        padding: 7% 0;
+        font-size: 1.2em;
+    }
+
+    .logo {
+        width: 70px;
+        margin-top: 2%;
+    }
+
+    main {
+        margin-top: 1%;
+    }
+
+    .humans_icon {
+        width: 50%;
+    }
+
+    .name {
+        font-size: 3em;
+    }
+
+    .describe_p {
+        font-size: 1.4em;
+        letter-spacing: 10px;
+        margin: 5% 0 20% 0;
+    }
+
+    .start_btn {
+        padding: 5% 10%;
+        border-radius: 50px;
+        font-size: 1.3em;
+    }
+
+    .about_container {
+        margin-top: 6.5%;
+    }
+
+    .about_btn {
+        padding: 1% 30%;
+        border-radius: 35px;
+        font-size: 1.4em;
+    }
+}

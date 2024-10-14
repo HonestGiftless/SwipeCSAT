@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Poppins", sans-serif;
+}
+
+/* Поле поиска */
+.finder_form {
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.finder_input,
+.finder_button {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+}
+
+.finder_input {
+    width: 100%;
+    background: rgba(217, 217, 217, 0.6);
+    font-family: "Poppins", sans-serif;
+}
+
+.finder_button {
+    position: absolute;
+    background: url("https://img.icons8.com/ffffff/search");
+    background-size: cover;
+    cursor: pointer;
+}
+
+.finder_button:hover {
+    opacity: .9;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.logo_header,
+.filter_header,
+.finder_form,
+.profile_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_container > a {
+    text-align: center;
+}
+
+.profile_container:hover,
+.finder_form > .filter_image:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.navigation_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    border-bottom: 1px solid black;
+}
+
+.navigation_container > a {
+    text-align: center;
+
+    font-family: "Montserrat Alternates", sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation_container > a:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.471);
+}
+
+header,
+.navigation_container {
+    background-color: rgb(246, 246, 246);
+}
+
+.product_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.732), rgba(0, 0, 0, 0.218));
+}
+
+.grade_circle {
+    background-color: aqua;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product_name,
+.product_type_header,
+.grade_info {
+    font-family: "Nanum Gothic Coding", monospace;    
+}
+
+.product_description,
+.product_type {
+    font-family: "Palanquin Dark", sans-serif;
+}
+
+.product_grade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product_image {
+    border-bottom: 1px solid black;
+}
+
+@media only screen and (min-width: 1441px) {
+    header {
+        padding: 1% 5% 1% 5%;
+        padding-top: 1%;
+    }
+
+    .finder_form {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .finder_input {
+        height: 42px;
+        padding-left: 15px;
+    }
+
+    .finder_button {
+        height: 26px;
+        width: 26px;
+        top: 8px;
+        right: 90px;
+    }
+
+    .finder_button::before {
+        font-size: 1.3em;
+    }
+
+    .logo_image {
+        width: 50%;
+    }
+
+    .profile_image {
+        width: 70%;
+    }
+
+    .filter_image {
+        margin-left: 5%;
+        width: 5%;
+    }
+
+    .navigation_container {
+        padding: 1% 5% 1% 5%;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        padding: 1% 5% 1% 5%;
+    }
+
+    .grade_circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3em;
+    }
+
+    .product_image > img,
+    .product_card {
+        width: 450px;
+    }
+
+    .product_card {
+        border-radius: 30px;
+    }
+
+    .product_image > img {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .product_info {
+        padding: 3% 5%;
+    }
+
+    .product_type_container {
+        margin: 3% 0 2% 0;
+    }
+}
